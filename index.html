@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+      :root{
+        --borda:#7ed6df;
+      }
+    div,body,canvas{padding:0;margin:0;} 
+    canvas{
+      box-shadow:20px 0px var(--borda),
+      -20px 0px var(--borda),
+      40px 0px rgba(0,0,0,.1),
+      -40px 0px rgba(0,0,0,.1)
+      ;
+      border-bottom: 40px solid var(--borda);
+    }
+
+    body{background-color:#85c6d9;}
+    
+    
+    </style>
+    <script src="dist/bundle.js"></script>
+  </head>
+  <body>
+    <div id="game" style="text-align:center;"></div>
+    <script defer>
+    if(window.outerWidth <= 500 ){
+    document.body.style.zoom=3.0;this.blur();
+    }
+
+
+
+
+    var e = new Event('keydown');
+	  e.which = (e.keyCode = 32); // 32 is the keycode for the space bar
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    document.dispatchEvent(e);  
+    console.log(e);
+
+
+
+    document.onclick = function(){
+    var e = new Event('keydown');
+	  e.which = (e.keyCode = 32); // 32 is the keycode for the space bar
+  	document.dispatchEvent(e);  
+    console.log(e);
+    }
+
+
+
+    </script>
+
+  </body>
+</html>
